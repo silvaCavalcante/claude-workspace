@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C C:/reposit/CoreonCap/.claude remote -v)",
+      "Bash(git -C C:/reposit/CoreonCap/.claude branch --show-current)",
+      "Bash(git -C C:/reposit/CoreonCap/.claude status --short)",
+      "Bash(git -C C:/reposit/CoreonCap/.claude log --oneline -5)",
+      "Bash(git -C C:/reposit/CoreonCap/.claude remote add origin https://github.com/silvaCavalcante/claude-workspace.git)",
+      "Bash(git -C C:/reposit/CoreonCap/.claude branch -m master main)",
+      "Bash(git -C C:/reposit/CoreonCap/.claude add -A)"
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+Você é um engenheiro de QA sênior. Sua tarefa é testar a tela de Produtos de forma completa e sistemática.
+## Contexto
+A documentação da tela está no arquivo anexo. Leia-a integralmente antes de começar qualquer teste.
+## Acesso à aplicação
+- URL: http://localhost:3000/
+- Usuário: adm@oasisit.com.br
+- Senha: Mudar123@
+## O que você deve fazer
+### 1. Leitura e mapeamento
+- Leia toda a documentação anexa
+- Mapeie todos os campos, fluxos, ações, validações e regras de negócio descritos
+- Identifique todos os cenários de teste possíveis antes de começar
+### 2. Verificação de conformidade com a documentação
+Para cada elemento da tela (campos, botões, tabelas, filtros, modais, mensagens):
+- Verifique se está presente conforme especificado
+- Verifique labels, textos e traduções
+- Verifique comportamentos e fluxos descritos
+- Registre qualquer divergência encontrada
+### 3. Execução de cenários de teste
+Execute todos os cenários abaixo para cada funcionalidade da tela:
+**Cenários de caminho feliz (happy path)**
+- Criação de um novo produto com todos os campos obrigatórios preenchidos corretamente
+- Edição de um produto existente
+- Listagem e visualização de produtos
+- Busca/filtro de produtos (se aplicável)
+- Exclusão de um produto(se aplicável)
+**Cenários de validação e erro**
+- Tentar salvar com campos obrigatórios vazios
+- Inserir dados em formato inválido em cada campo
+- Inserir valores fora dos limites permitidos (máx/mín de caracteres, valores numéricos, datas)
+- Testar campos duplicados (se a documentação mencionar unicidade)
+**Cenários de borda (edge cases)**
+- Campos com valor mínimo e máximo permitido
+- Strings muito longas
+- Caracteres especiais e acentuação
+- Campos opcionais deixados em branco
+**Cenários de navegação e UX**
+- Cancelar uma operação e verificar que nenhuma alteração foi salva
+- Navegar para fora da tela e voltar
+- Verificar mensagens de sucesso e erro
+### 4. Relatório final
+Ao terminar todos os testes, gere um relatório estruturado contendo:
+**Sumário executivo**
+- Total de cenários executados
+- Total de cenários aprovados
+- Total de falhas encontradas
+- Avaliação geral (Aprovado / Aprovado com ressalvas / Reprovado)
+**Conformidade com a documentação**
+- Lista de itens conformes
+- Lista de divergências encontradas (com descrição do esperado vs. observado)
+**Resultado por cenário de teste**
+Para cada cenário: nome, status (✅ passou / ❌ falhou / ⚠️ parcial), e descrição do resultado
+**Bugs e divergências detalhados**
+Para cada problema encontrado:
+- ID sequencial (BUG-001, BUG-002...)
+- Descrição clara do problema
+- Passos para reproduzir
+- Comportamento esperado
+- Comportamento observado
+- Severidade (Crítico / Alto / Médio / Baixo)
+**Observações e melhorias sugeridas**
+Qualquer ponto de atenção que não seja necessariamente um bug, mas que mereça revisão.
+---
+Seja metódico. Documente cada passo. Não pule etapas. Se encontrar um erro que impeça a continuação de um fluxo, registre e prossiga para o próximo cenário
+ 
+@C:\Users\leonardo.peres\Downloads\PT-📘 DDR Produtos-V2.pdf Você é um engenheiro de QA sênior. Sua tarefa é testar a tela de Produtos de forma completa e sistemática.
+## Contexto
+A documentação da tela está no arquivo anexo. Leia-a integralmente antes de começar qualquer teste.
+## Acesso à aplicação
+- URL: http://localhost:3000/
+- Usuário: adm@oasisit.com.br
+- Senha: Mudar123@
+## O que você deve fazer
+### 1. Leitura e mapeamento
+- Leia toda a documentação anexa
+- Mapeie todos os campos, fluxos, ações, validações e regras de negócio descritos
+- Identifique todos os cenários de teste possíveis antes de começar
+### 2. Verificação de conformidade com a documentação
+Para cada elemento da tela (campos, botões, tabelas, filtros, modais, mensagens):
+- Verifique se está presente conforme especificado
+- Verifique labels, textos e traduções
+- Verifique comportamentos e fluxos descritos
+- Registre qualquer divergência encontrada
+### 3. Execução de cenários de teste
+Execute todos os cenários abaixo para cada funcionalidade da tela:
+**Cenários de caminho feliz (happy path)**
+- Criação de um novo produto com todos os campos obrigatórios preenchidos corretamente
+- Edição de um produto existente
+- Listagem e visualização de produtos
+- Busca/filtro de produtos (se aplicável)
+- Exclusão de um produto(se aplicável)
+**Cenários de validação e erro**
+- Tentar salvar com campos obrigatórios vazios
+- Inserir dados em formato inválido em cada campo
+- Inserir valores fora dos limites permitidos (máx/mín de caracteres, valores numéricos, datas)
+- Testar campos duplicados (se a documentação mencionar unicidade)
+**Cenários de borda (edge cases)**
+- Campos com valor mínimo e máximo permitido
+- Strings muito longas
+- Caracteres especiais e acentuação
+- Campos opcionais deixados em branco
+**Cenários de navegação e UX**
+- Cancelar uma operação e verificar que nenhuma alteração foi salva
+- Navegar para fora da tela e voltar
+- Verificar mensagens de sucesso e erro
+### 4. Relatório final
+Ao terminar todos os testes, gere um relatório estruturado contendo:
+**Sumário executivo**
+- Total de cenários executados
+- Total de cenários aprovados
+- Total de falhas encontradas
+- Avaliação geral (Aprovado / Aprovado com ressalvas / Reprovado)
+**Conformidade com a documentação**
+- Lista de itens conformes
+- Lista de divergências encontradas (com descrição do esperado vs. observado)
+**Resultado por cenário de teste**
+Para cada cenário: nome, status (✅ passou / ❌ falhou / ⚠️ parcial), e descrição do resultado
+**Bugs e divergências detalhados**
+Para cada problema encontrado:
+- ID sequencial (BUG-001, BUG-002...)
+- Descrição clara do problema
+- Passos para reproduzir
+- Comportamento esperado
+- Comportamento observado
+- Severidade (Crítico / Alto / Médio / Baixo)
+**Observações e melhorias sugeridas**
+Qualquer ponto de atenção que não seja necessariamente um bug, mas que mereça revisão.
+---
+Seja metódico. Documente cada passo. Não pule etapas. Se encontrar um erro que impeça a continuação de um fluxo, registre e prossiga para o próximo cenário
