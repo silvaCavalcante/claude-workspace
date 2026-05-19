@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Skill(superpowers:using-superpowers)",
+      "Skill(superpowers:brainstorming)",
+      "Skill(superpowers:writing-plans)",
+      "Skill(superpowers:subagent-driven-development)",
+
+      "Bash(grep:*)",
+      "Bash(xargs grep:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet test:*)",
+      "Bash(docker compose *)",
+      "Bash(git:*)",
+      "Bash(powershell *)",
+
+      "Read(C:/reposit/CoreonCap/.claude/**)",
+      "Read(/c/reposit/CoreonCap/.claude/**)",
+
+      "Write(C:/reposit/CoreonCap/.claude/specs/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/specs/**)",
+      "Write(C:/reposit/CoreonCap/.claude/plans/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/plans/**)",
+      "Write(C:/reposit/CoreonCap/.claude/analyses/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/analyses/**)",
+      "Write(C:/reposit/CoreonCap/.claude/docs/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/docs/**)",
+      "Write(C:/reposit/CoreonCap/.claude/conventions/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/conventions/**)",
+      "Write(C:/reposit/CoreonCap/.claude/agents/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/agents/**)",
+      "Write(C:/reposit/CoreonCap/.claude/scripts/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/scripts/**)",
+      "Write(C:/reposit/CoreonCap/.claude/tests/**)",
+      "Edit(C:/reposit/CoreonCap/.claude/tests/**)",
+
+      "PowerShell(Test-Path *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Move-Item *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Measure-Object *)",
+
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:github.com)",
+      "WebSearch"
+    ]
+  }
+}

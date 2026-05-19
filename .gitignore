@@ -1,0 +1,16 @@
+# Credenciais locais
+**/.env
+!**/.env.example
+**/.env.sonar
+!**/.env.sonar.example
+
+# Artefatos locais de teste
+tests/_artifacts/private/
+
+# Estados de IDE
+.vscode/
+.idea/
+
+# Renders gerados (recriáveis pelo build script)
+*.html
+*.pdf
