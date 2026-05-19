@@ -14,6 +14,12 @@ tests/_artifacts/private/
 # Estado local da sessão do Claude Code (settings.local.json com tokens/comandos)
 .claude/
 
+# Conteúdo interno do projeto que não deve ir para o GitHub
+plans/
+specs/
+docs/
+analyses/
+
 # Renders gerados (recriáveis pelo build script)
 *.html
 *.pdf
