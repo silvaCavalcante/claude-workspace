@@ -17,6 +17,7 @@
       "Bash(docker compose *)",
       "Bash(git:*)",
       "Bash(powershell *)",
+      "Bash(bash C:/reposit/CoreonCap/.claude/scripts/validate-md.sh *)",
 
       "Read(C:/reposit/CoreonCap/.claude/**)",
       "Read(/c/reposit/CoreonCap/.claude/**)",
@@ -51,6 +52,19 @@
       "WebFetch(domain:www.anthropic.com)",
       "WebFetch(domain:github.com)",
       "WebSearch"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash C:/reposit/CoreonCap/.claude/scripts/validate-md.sh"
+          }
+        ]
+      }
     ]
   }
 }

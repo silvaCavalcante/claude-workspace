@@ -92,6 +92,31 @@ O review deve cobrir:
 - Sem regressão em outros fluxos.
 - Sem código copiado de microsserviços (`tests/compare/` não recebe `.cs`).
 
+### 2.5. UI validation (condicional — `tem-ui: true`)
+
+Validar comportamento de UI da feature/bug em browser real via skill `playwright-agent`. Veredicto **soft**: falha em critério de aceite gera pendência registrada; dev decide se arquiva, com justificativa documentada no plano.
+
+**Rodar SE** o frontmatter da spec/bug declarar `tem-ui: true`. Pular SE `tem-ui: false` ou ausente.
+
+**Padrão de uso completo:** `@conventions/playwright-testing.md`.
+
+Fluxo resumido:
+
+1. **Ler frontmatter** da spec (`specs/{features,bugs}/<arquivo>.md`); confirmar `tem-ui: true`.
+2. **Montar prompt** a partir do "Comportamento esperado" da spec — cada critério vira assertion individual. Reusar credenciais do Role declarado em `Coreon.PortalVendas/Coreon.PortalVendas.SmokeTests/settings.local.json`.
+3. **Confirmar Portal_Vendas rodando** localmente (`dotnet run --project Coreon.PortalVendas/Portal_Vendas/Portal_Vendas.csproj` ou IIS Express).
+4. **Acionar a skill `playwright-agent`** com o prompt montado (via `Skill` tool inline).
+5. **Coletar relatório** no formato de `references/report-template.md` da skill executora.
+6. **Persistir** em `.claude/tests/_artifacts/YYYY-MM-DD-<feature-slug>.md` (mesmo slug da spec).
+
+Verificar no relatório:
+
+- Todos os critérios da seção "Comportamento esperado" da spec foram exercidos individualmente.
+- Cada critério tem evidência (screenshot ou observação textual).
+- Sucesso integral → ✅ passo aprovado.
+- Falha em qualquer critério → ⚠️ pendência registrada (não bloqueia, mas exige justificativa no plano antes do arquivamento).
+- Warnings laterais (CSS, lentidão, modal não-esperado fora dos critérios) → registrados no relatório, não bloqueiam.
+
 ### 3. Análise Sonar local (condicional)
 
 **Rodar SE** houver mudança em `.cs` ou `.cshtml.cs`. Pular SE for apenas `.md`/config.
@@ -120,6 +145,7 @@ Conferir o checklist da §7 do `docs/claude-workspace-usage-guide.md`:
 - [ ] Comportamento esperado da spec satisfeito (rodar suíte de testes do microsserviço).
 - [ ] Passo 1.5 (analyze cruzado) sem divergências não justificadas.
 - [ ] Code review do passo 2 passou (sem severidade Crítica/Alta não-resolvida).
+- [ ] Passo 2.5 (UI validation) executado quando `tem-ui: true`; pendências não-justificadas resolvidas ou aceitas explicitamente.
 - [ ] Sonar local do passo 3 sem novos issues Críticos/Altos (se aplicável).
 - [ ] Testes proporcionais à mudança (cobertura mínima conforme `@agents/backend-unit-tests.md` ou `@agents/frontend-unit-tests.md`).
 - [ ] Nenhum binário ou secret commitado.
@@ -164,5 +190,7 @@ Devolver ao usuário:
 - ❌ Aceitar Sonar com Críticos/Altos novos sem registrar justificativa no plano.
 - ❌ Considerar pronto sem rodar a suíte de testes do microsserviço.
 - ❌ Considerar pronto sem rodar o analyze cruzado (passo 1.5) quando há código tocado.
+- ❌ Pular o passo 2.5 (UI validation) quando a spec tem `tem-ui: true` — mesmo "pequenas mudanças visuais" passam pelo gate.
+- ❌ Aceitar pendência do passo 2.5 sem registrar justificativa no plano.
 - ❌ Marcar como pronto sem o usuário confirmar.
 - ❌ Rodar code review **depois** de mover para `completed/` (perde o gate).

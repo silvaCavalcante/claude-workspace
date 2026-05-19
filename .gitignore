@@ -11,6 +11,9 @@ tests/_artifacts/private/
 .vscode/
 .idea/
 
+# Estado local da sessão do Claude Code (settings.local.json com tokens/comandos)
+.claude/
+
 # Renders gerados (recriáveis pelo build script)
 *.html
 *.pdf
